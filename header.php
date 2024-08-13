@@ -39,7 +39,7 @@ body {
   <a class="<?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>" href="index.php">Home</a>
   <a target="_blank" class="<?php echo basename($_SERVER['PHP_SELF']) == 'api_ocap_sites.php' ? 'active' : ''; ?>" href="api_ocap_sites.php">Get Ocap Sites</a>
   <a target="_blank" class="<?php echo basename($_SERVER['PHP_SELF']) == 'user_api.php' ? 'active' : ''; ?>" href="user_api.php">Get Users</a>
-  <a target="_blank" class="<?php echo basename($_SERVER['PHP_SELF']) == 'study.php' ? 'active' : ''; ?>" href="study.php">Get Study</a>
+  <a target="_blank" class="<?php echo basename($_SERVER['PHP_SELF']) == 'study_apis.php' ? 'active' : ''; ?>" href="study_api.php">Get Study</a>
   <a target="_blank" class="<?php echo basename($_SERVER['PHP_SELF']) == 'site_code_empty_api.php' ? 'active' : ''; ?>" href="site_code_empty_api.php">Site Code Empty</a>
 </div>
 

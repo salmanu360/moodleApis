@@ -22,10 +22,7 @@ if ($result->num_rows > 0) {
 }
 
 // Query to get the count of unique records
-$countSql = "SELECT COUNT(*) AS record_count
-FROM mdl_user_info_data d
-JOIN mdl_user u ON d.userid = u.id
-WHERE d.fieldid = 9 AND (d.data IS NULL OR d.data = '')";
+$countSql = "SELECT COUNT(DISTINCT id) AS total_count FROM mdl_user_info_data WHERE data ='' and fieldid=9";
 $countResult = $conn->query($countSql);
 $totalCount = 0;
 
