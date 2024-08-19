@@ -6,15 +6,7 @@ header("Access-Control-Allow-Origin: http://localhost:3000");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
-// $sql = "
-//     SELECT 
-//         c.id AS course_id, c.fullname, c.shortname, c.idnumber, 
-//         g.id AS group_id, g.name AS group_name, g.description AS group_description,
-//         gm.userid AS member_id
-//     FROM mdl_course c
-//     LEFT JOIN mdl_groups g ON c.id = g.courseid
-//     LEFT JOIN mdl_groups_members gm ON g.id = gm.groupid
-// ";
+// Query to get unique records from mdl_course, corresponding groups from mdl_groups, and group members from mdl_groups_members
 $sql = "
     SELECT 
         c.id AS course_id, c.fullname, c.shortname, c.idnumber, 
@@ -24,7 +16,6 @@ $sql = "
     LEFT JOIN mdl_groups g ON c.id = g.courseid
     LEFT JOIN mdl_groups_members gm ON g.id = gm.groupid
 ";
-// Query to get unique records from mdl_course, corresponding groups from mdl_groups, and group members from mdl_groups_members
 $result = $conn->query($sql);
 
 $data = array();
